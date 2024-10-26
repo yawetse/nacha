@@ -4780,7 +4780,7 @@ function hasOwnProperty(obj, prop) {
         case 'Do':
             return strict ? config._locale._ordinalParse : config._locale._ordinalParseLenient;
         default :
-            a = new RegExp(regexpEscape(unescapeFormat(token.replace('\\', '')), 'i'));
+            a = new RegExp(regexpEscape(unescapeFormat(token.replace(/\\/g, '')), 'i'));
             return a;
         }
     }
